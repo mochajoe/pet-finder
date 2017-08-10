@@ -29,14 +29,15 @@ export default class LostAndFound extends React.Component {
   renderEntries() {
     if (this.state.entries.length>0) {
       return (
-        <div>
+        <div className="entries">
         {this.state.entries.map(entry => <LostAndFoundEntry entry={entry} key = {entry._id}/>)}
         </div>
       )
     } else {
-      return (
-        <div><i className="fa fa-paw fa-spin fa-5x"></i> Loading..</div>
-      )
+	    return (
+	
+	    <div className="loading"><i className="fa fa-paw fa-spin fa-5x"></i> Loading..</div>
+    )
     }
   }
 
